@@ -14,13 +14,6 @@
 .choice-list {
     list-style-type: none;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.choice {
-    display: flex;
-    flex-direction: column;
 }
 
 #submit-button {

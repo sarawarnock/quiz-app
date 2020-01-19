@@ -20,30 +20,34 @@
     </section>
     <section class="questions">
         <h2>"Question"</h2>
-            <ul class="answer-list">
-                <li class="answer-option">Answer 1</li>
-                <li class="answer-option">Answer 2</li>
-                <li class="answer-option">Answer 3</li>
-                <li class="answer-option">Answer 4</li>
-            </ul>
-            <button id="submit-button">Submit</button>
+            <div class="choice-list">
+                <input type="radio" id="choice choice1">
+                <label for="choice1">Choice1</label>
+                <input type="radio" id="choice choice2">
+                <label for="choice2">Choice2</label>
+                <input type="radio" id="choice choice3">
+                <label for="choice3">Choice3</label>
+                <input type="radio" id="choice choice4">
+                <label for="choice4">Choice4</label>
+            </div>
+            <button type="submit" id="submit-button">Submit</button>
             <p>Score: (2/3)</p>
     </section>
     <section class="correct">
         <h2>Correct!</h2>
             <p>Congratulations! You nailed it!</p>
-        <button class="next-button">Next Question</button>
+        <button type="submit" class="next-button">Next Question</button>
     </section>
     <section class="incorrect">
         <h2>Incorrect.</h2>
             <p>Not quite, the correct answer is...</p>
-        <button>Next Question</button>
+        <button type="submit" class="next-button">Next Question</button>
     </section>
     <section class="final">
         <h2>Congratulations! You finished the quiz!</h2>
         <h3>You scored (10/10)</h3>
             <p>You certainly know what it takes to go green!</p>
-        <button id="replay-button">Replay</button>
+        <button type="submit" id="replay-button">Replay</button>
     </section>
   <script src="index.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>

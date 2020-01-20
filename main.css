@@ -1,3 +1,7 @@
+body {
+    box-sizing: border-box;
+}
+
 .start {
     border: 1px solid black;
     text-align: center;

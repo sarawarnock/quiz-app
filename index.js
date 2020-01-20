@@ -72,8 +72,18 @@ function renderQuiz() {
     console.log('`renderQuiz` ran');
 }
 
+function renderQuestion() {
+    //renders each question as user moves through the quiz
+    
+    console.log('`renderQuestion` ran');
+}
+
 function handleStartButton() {
     //when a user clicks the "start" button, the quiz begins
+    $('#start-button').on('click', function(event) {
+        event.preventDefault; 
+        renderQuestion();
+    });
     console.log('`handleStartButton` ran');
 }
 

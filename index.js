@@ -72,7 +72,6 @@ const shuffleQuestions, currentQuestionIndex
 function renderRecyclingQuiz() {
     //start page appears 
     console.log('`renderQuiz` ran');
-    const recycleQuizString = generateRecycleQuizString(STORE);
 }
 
 function renderQuestion() {

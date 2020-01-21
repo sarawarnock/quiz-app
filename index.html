@@ -16,11 +16,12 @@
     <section class="start">
         <h1>How Much Do YOU Know About Recycling?</h1>
             <p>Think you know how to reduce and reuse? Test your knowledge here!</p>
-        <button type="submit" id="start-button">Start</button>
+        <button type="submit" class="start-button">Start</button>
     </section>
     <section class="questions">
-        <h2>"Question"</h2>
-            <div class="choice-list">
+        <div class="questionAnswerForm"></div>
+        <!-- <h2>"Question"</h2> -->
+            <!-- <div class="choice-list">
                 <input type="radio" class="choice" id="choice1" name="answer">
                 <label for="choice1">Choice1</label>
                 <input type="radio" class="choice" id="choice2" name="answer">
@@ -29,19 +30,21 @@
                 <label for="choice3">Choice3</label>
                 <input type="radio" class="choice" id="choice4" name="answer">
                 <label for="choice4">Choice4</label>
-            </div>
+            </div> -->
             <button type="submit" id="submit-button">Submit</button>
-            <p class="score">Score: (''))</p>
-            <p class="question-num">Question Number: ('')</p>
+            <ul>
+                <li>Question: <span class="question-num">0</span>/10</li>
+                <li>Score: <span class="score">0</span></li>
+            </ul>
     </section>
-    <section class="correct">
+    <!-- <section class="correct">
         <h2>Correct!</h2>
             <p>Congratulations! You nailed it!</p>
         <button type="submit" class="next-button">Next Question</button>
     </section>
     <section class="incorrect">
         <h2>Incorrect.</h2>
-            <p>Not quite, the correct answer is...</p>
+            <p>Not quite, the correct answer is...</p> -->
         <button type="submit" class="next-button">Next Question</button>
     </section>
     <section class="final">

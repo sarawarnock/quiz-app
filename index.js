@@ -4,19 +4,68 @@
 let currentScore = 0;
 let questionNumber = 0;
 
-function renderQuestion() {
+function generateQuestion() {
     //renders each question as user moves through the quiz
-    
-    console.log('`renderQuestion` ran');
+    if (questionNumber < STORE.length) {
+        return `<div class="question-${questionNumber}">
+        <h2>${STORE[questionNumber].question}</h2>
+        <form>
+        <fieldset>
+        <label class="answerOption">
+        <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
+        <span>${STORE[questionNumber].answers[0]}</span>
+        </label>
+        <label class="answerOption">
+        <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
+        <span>${STORE[questionNumber].answers[1]}</span>
+        </label>
+        <label class="answerOption">
+        <input type="radio" value="${STORE[questionNumber].answers[2]}" name="answer" required>
+        <span>${STORE[questionNumber].answers[2]}</span>
+        </label>
+        <label class="answerOption">
+        <input type="radio" value="${STORE[questionNumber].answers[3]}" name="answer" required>
+        <span>${STORE[questionNumber].answers[3]}</span>
+        </label>
+        <button type="submit" class="submitButton">Submit</button>
+        </fieldset>
+        </form>
+        </div>`;
+    } else {
+        renderResults();
+        restartQuiz();
+      }
+    console.log('`generateQuestion` ran');  
+    }
+
+function changeQuestionNumber() {
+    questionNumber++;
+    $('.question-num').text(questionNumber+1);
+
+    console.log('`changeQuestionNumber` ran');
+}    
+
+function changeScore() {
+    score++;
+
+    console.log('`changeScore` ran');
 }
 
 function handleStartButton() {
     //when a user clicks the "start" button, the quiz begins
-    $('#start-button').on('click', function(event) {
+    $('.start').on('click', '.start-button', function(event) {
         event.preventDefault; 
-        renderQuestion();
+        $('.start').remove();
+        $('.questionAnswerForm').css('display', 'block');
+        $('.question-num').text(1);
     });
     console.log('`handleStartButton` ran');
+}
+
+function renderQuestion() {
+    $('.questionAnswerForm').html(generateQuestion());
+
+    console.log('`renderQuestion` ran');
 }
 
 function handleSubmitButton() {
@@ -26,18 +75,14 @@ function handleSubmitButton() {
     //if question is incorrect, "incorrect, the correct answer is..."
     $('#submit-button').on('click', function(event) {
         event.preventDefault;
+        let selected = $('.inout:checked');
+        let answer = selected.val();
+        let correct = `${STORE[questionNumber].correctAnswer}`;
+        if (answer === correct) {
+            selected.parent().addClass('correct');
+        }
     });
     console.log('`handleSubmitButton` ran');
-}
-
-function incrementScore() {
-    //add +1 to score if question is correct
-    (if /*answer*/ === SCORE.correctAnswer (
-        currentScore ++ 
-        questionNumber ++
-    )
-    else if /*answer*/ !== SCORE.correctAnswer (
-    questionNumber ++))
 }
 
 function handleNextQuestionButton() {
@@ -62,9 +107,10 @@ function handleReplay() {
 
 function handleQuiz() {
     //responsible for running all of our other functions upon page load
-    renderRecyclingQuiz();
     renderQuestion();
     handleStartButton();
+    changeQuestionNumber();
+    changeScore();
     handleSubmitButton();
     handleNextQuestionButton();
     handleFinalQuestion();

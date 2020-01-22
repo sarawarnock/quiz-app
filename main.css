@@ -13,12 +13,7 @@ body {
     padding: 10px;
 }
 
-.choice-list {
-    list-style-type: none;
-    text-align: center;
-}
-
-#submit-button {
+.submit-button {
     margin: 10px;
 }
 
@@ -26,4 +21,8 @@ body {
     text-align: center;
     padding: 10px;
     margin: 10px;
+}
+
+ul {
+    list-style-type: none;
 }

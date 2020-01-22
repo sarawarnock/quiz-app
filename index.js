@@ -34,6 +34,7 @@ function generateQuestion() {
     } else {
         renderResults();
         restartQuiz();
+        $('.question-num').text(10)
       }
     console.log('`generateQuestion` ran');  
     }
@@ -54,7 +55,6 @@ function changeScore() {
 function handleStartButton() {
     //when a user clicks the "start" button, the quiz begins
     $('.start').on('click', '.start-button', function(event) {
-        event.preventDefault; 
         $('.start').remove();
         $('.questionAnswerForm').css('display', 'block');
         $('.question-num').text(1);
@@ -73,7 +73,7 @@ function handleSubmit() {
     //if a user does not select an answer, an alert pops up
     //if question is correct, "yay, correct" 
     //if question is incorrect, "incorrect, the correct answer is..."
-    $('.submit-button').on('click', function(event) {
+    $('form').on('submit', function(event) {
         event.preventDefault;
         let selected = $('input:checked');
         let answer = selected.val();
@@ -138,7 +138,7 @@ function renderResults() {
 function renderNextQuestion() {
     //when a user clicks "next question", 
     //score changes, and the next question appears on the next screen
-    $('.questions').on('click', '.next-button', function(event) {
+    $('main').on('click', '.next-button', function(event) {
         changeQuestionNumber();
         renderQuestion();
         handleSubmit();
@@ -149,7 +149,7 @@ function renderNextQuestion() {
 function handleReplay() {
     //if the user decides to replay the quiz, they will click the replay button
     //this will take them to the start of the quiz 
-    $('.questions').on('click', '.replay-button', function(event) {
+    $('main').on('click', '.replay-button', function(event) {
         location.reload();
     });
     console.log('`handleReplay` ran');

@@ -68,14 +68,14 @@ function renderQuestion() {
     console.log('`renderQuestion` ran');
 }
 
-function handleSubmitButton() {
+function handleSubmit() {
     //a user selects an answer and clicks "submit"
     //if a user does not select an answer, an alert pops up
     //if question is correct, "yay, correct" 
     //if question is incorrect, "incorrect, the correct answer is..."
     $('#submit-button').on('click', function(event) {
         event.preventDefault;
-        let selected = $('.inout:checked');
+        let selected = $('.input:checked');
         let answer = selected.val();
         let correct = `${STORE[questionNumber].correctAnswer}`;
         if (answer === correct) {
@@ -86,7 +86,7 @@ function handleSubmitButton() {
             ifAnswerIsWrong();
         }
     });
-    console.log('`handleSubmitButton` ran');
+    console.log('`handleSubmit` ran');
 }
 
 function ifAnswerIsCorrect() {
@@ -117,23 +117,41 @@ function wrongFeedback() {
     </p><button type=button class="next-button">Next Question</button></div>`);
 }
 
-function handleNextQuestionButton() {
-    //when a user clicks "next question", 
-    //score changes, and the next question appears on the next screen
-    console.log('`handleNextQuestionButton` ran');
+function renderResults() {
+    if (score = 10) {
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Perfect score! You're as green as grass!</h3>
+        <img src=" " alt="green grass icon"/><p>You got 10/10 correct!</p><button class="replay-button">Replay</button></div>`);
+    } else if (score < 10 && score >=7) {
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Good work, you're on your way to becoming a green guru!</h3>
+        <img src=" " alt="green grass icon"/><p>You got ${score} /10 correct!</p><button class="replay-button">Replay</button></div>`);
+    } else if (score < 7 && score >= 3) {
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>You've got some studying to do, but you can certainly be a recycling expert!</h3>
+        <img src=" " alt="smiling recycling bin icon"/><p>You got ${score} /10 correct!</p><button class="replay-button">Replay</button></div>`);
+    } else {
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>You need to work on your recycling knowledge, the Earth is counting on you!</h3>
+        <img src=" " alt="sad earth icon"/><p>You got ${score} /10 correct!</p><button class="replay-button">Replay</button></div>`);
+    }
+
+    console.log('`renderResults` ran');
 }
 
-function handleFinalQuestion() {
-    //when the final question gets submitted, the screen will display the final score
-    //along with a message about how the user did (depending on how many they got correct)
-    //turn score into percentage? currentScore/questionNumber
-    //there will be a "Replay" button
-    console.log('`handleFinalQuestion` ran');
+function renderNextQuestion() {
+    //when a user clicks "next question", 
+    //score changes, and the next question appears on the next screen
+    $('.questions').on('click', '.next-button', function(event) {
+        changeQuestionNumber();
+        renderQuestion();
+        handleSubmit();
+    });
+    console.log('`handleNextQuestionButton` ran');
 }
 
 function handleReplay() {
     //if the user decides to replay the quiz, they will click the replay button
     //this will take them to the start of the quiz 
+    $('.questions').on('click', '.replay-button', function(event) {
+        location.reload();
+    });
     console.log('`handleReplay` ran');
 }
 
@@ -141,12 +159,9 @@ function handleQuiz() {
     //responsible for running all of our other functions upon page load
     renderQuestion();
     handleStartButton();
-    changeQuestionNumber();
-    changeScore();
-    handleSubmitButton();
-    handleNextQuestionButton();
-    handleFinalQuestion();
-    handleReplay();
+    renderNextQuestion();
+    handleSubmit(); 
+    renderResults();
 }
 
 $(handleQuiz);

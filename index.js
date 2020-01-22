@@ -27,7 +27,7 @@ function generateQuestion() {
         <input type="radio" value="${STORE[questionNumber].answers[3]}" name="answer" required>
         <span>${STORE[questionNumber].answers[3]}</span>
         </label>
-        <button type="submit" class="submitButton">Submit</button>
+        <button type="submit" class="submit-button">Submit</button>
         </fieldset>
         </form>
         </div>`;
@@ -73,9 +73,9 @@ function handleSubmit() {
     //if a user does not select an answer, an alert pops up
     //if question is correct, "yay, correct" 
     //if question is incorrect, "incorrect, the correct answer is..."
-    $('#submit-button').on('click', function(event) {
+    $('.submit-button').on('click', function(event) {
         event.preventDefault;
-        let selected = $('.input:checked');
+        let selected = $('input:checked');
         let answer = selected.val();
         let correct = `${STORE[questionNumber].correctAnswer}`;
         if (answer === correct) {
@@ -157,11 +157,10 @@ function handleReplay() {
 
 function handleQuiz() {
     //responsible for running all of our other functions upon page load
-    renderQuestion();
     handleStartButton();
-    renderNextQuestion();
+    renderQuestion();
     handleSubmit(); 
-    renderResults();
+    renderNextQuestion();
 }
 
 $(handleQuiz);

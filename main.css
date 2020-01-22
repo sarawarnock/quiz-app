@@ -3,14 +3,12 @@ body {
 }
 
 .start {
-    border: 1px solid black;
     text-align: center;
     padding: 10px;
     margin: 10px;
 }
 
-.questions {
-    border: 1px solid black;
+.questions { 
     text-align: center;
     padding: 10px;
 }
@@ -25,28 +23,6 @@ body {
 }
 
 .answer-option {
-    text-align: center;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-}
-
-.correct {
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
-}
-
-.incorrect {
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
-}
-
-.final {
-    border: 1px solid black;
     text-align: center;
     padding: 10px;
     margin: 10px;

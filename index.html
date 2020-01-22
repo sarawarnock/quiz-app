@@ -1,61 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>How Much Do You Know About Recycling?</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-</head>
-
-<body>
-    <section class="start">
-        <h1>How Much Do YOU Know About Recycling?</h1>
-            <p>Think you know how to reduce and reuse? Test your knowledge here!</p>
-        <button type="submit" class="start-button">Start</button>
-    </section>
-    <section class="questions">
-        <div class="questionAnswerForm"></div>
-        <!-- <h2>"Question"</h2> -->
-            <!-- <div class="choice-list">
-                <input type="radio" class="choice" id="choice1" name="answer">
-                <label for="choice1">Choice1</label>
-                <input type="radio" class="choice" id="choice2" name="answer">
-                <label for="choice2">Choice2</label>
-                <input type="radio" class="choice" id="choice3" name="answer">
-                <label for="choice3">Choice3</label>
-                <input type="radio" class="choice" id="choice4" name="answer">
-                <label for="choice4">Choice4</label>
-            </div> -->
-            <!--<button type="submit" id="submit-button">Submit</button>-->
-            <ul>
-                <li>Question: <span class="question-num">0</span>/10</li>
-                <li>Score: <span class="score">0</span></li>
-            </ul>
-    </section>
-    <!--<section class="correct">
-        <h2>Correct!</h2>
-            <p>Congratulations! You nailed it!</p>
-        <button type="submit" class="next-button">Next Question</button>
-    </section>
-    <section class="incorrect">
-        <h2>Incorrect.</h2>
-            <p>Not quite, the correct answer is...</p>
-        <button type="submit" class="next-button">Next Question</button>
-    </section>
-    <section class="final">
-        <h2>Congratulations! You finished the quiz!</h2>
-        <h3>You scored [score]</h3>
-            <p>You certainly know what it takes to go green!</p>
-        <button type="submit" id="replay-button">Replay</button>
-    </section>-->
-
-    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
-    <script src="datastore.js"></script>  
-    <script src="index.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>How Much Do You Know About Recycling?</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <section class="start">
+            <h1 class="start">How Much Do YOU Know About Recycling?</h1>
+                <p class="start">Think you know how to reduce and reuse? Test your knowledge here!</p>
+            <button type="button" class="start-button">Start</button>
+        </section>
+        <section class="questions">
+            <div class="questionAnswerForm"></div>
+                <ul>
+                    <li>Question: <span class="question-num">0</span>/10</li>
+                    <li>Score: <span class="score">0</span></li>
+                </ul>
+        </section>
+        <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+        <script src="datastore.js"></script>  
+        <script src="index.js"></script>
+    </body>
 </html>

@@ -143,7 +143,7 @@ function renderNextQuestion() {
         renderQuestion();
         handleSubmit();
     });
-    console.log('`handleNextQuestionButton` ran');
+    console.log('`renderNextQuestion` ran');
 }
 
 function handleReplay() {

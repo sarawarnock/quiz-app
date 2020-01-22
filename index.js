@@ -80,9 +80,41 @@ function handleSubmitButton() {
         let correct = `${STORE[questionNumber].correctAnswer}`;
         if (answer === correct) {
             selected.parent().addClass('correct');
+            ifAnswerIsCorrect();
+        } else {
+            selected.parent().addClass('wrong');
+            ifAnswerIsWrong();
         }
     });
     console.log('`handleSubmitButton` ran');
+}
+
+function ifAnswerIsCorrect() {
+    correctFeedback();
+    updateScore();   
+}
+
+function ifAnswerIsWrong() {
+    incorrectFeedback();
+}
+
+function updateScore() {
+    changeScore();
+    $('.score').text(score);   
+}
+
+function correctFeedback() {
+    let correctAnswer = `${STORE[question-num].correctAnswer}`;
+    $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="img"<img src="${STORE[question-num].img}"> 
+    <alt= "${STORE[question-num].alt}"/></div><p>Yes! You're right!</p>
+    <button type=button class="next-button">Next Question</button></div>`);
+}
+
+function wrongFeedback() {
+    let correctAnswer = `${STORE[question-num].correctAnswer}`;
+    $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="img"<img src="${STORE[question-num].img}"> 
+    <alt= "${STORE[question-num].alt}"/></div><p>Oops, that's not right!</p><p>The correct answer is <span>"${correctAnswer}"</span>
+    </p><button type=button class="next-button">Next Question</button></div>`);
 }
 
 function handleNextQuestionButton() {

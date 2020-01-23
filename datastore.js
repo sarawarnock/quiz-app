@@ -50,7 +50,7 @@ const STORE = [
 
     {
         question: 'Which recyclable items are commonly forgotton about?',
-        answers: ['Beer bottles and cans', 'Plastic water bottles', 'Cereal boxex', 'Shampoo and conditioner bottles'],
+        answers: ['Beer bottles and cans', 'Plastic water bottles', 'Cereal boxes', 'Shampoo and conditioner bottles'],
         correctAnswer: 'Shampoo and conditioner bottles',
         img: '',
         alt: ''

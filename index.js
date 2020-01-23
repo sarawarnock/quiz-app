@@ -114,18 +114,18 @@ function incorrectFeedback() {
 }
 
 function renderResults() {
-    if (score = 10) {
+    if (currentScore === 10) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Perfect score! You're as green as grass!</h3>
         <img src=" " alt="green grass icon"/><p>You got 10/10 correct!</p><button class="replay-button">Replay</button></div>`);
-    } else if (score < 10 && score >=7) {
+    } else if (currentScore < 10 && currentScore >=7) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>Good work, you're on your way to becoming a green guru!</h3>
-        <img src=" " alt="green grass icon"/><p>You got ${score} /10 correct!</p><button class="replay-button">Replay</button></div>`);
-    } else if (score < 7 && score >= 3) {
-        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>You've got some studying to do, but you can certainly be a recycling expert!</h3>
-        <img src=" " alt="smiling recycling bin icon"/><p>You got ${score} /10 correct!</p><button class="replay-button">Replay</button></div>`);
+        <img src=" " alt="green grass icon"/><p>You got ${currentScore} /10 correct!</p><button class="replay-button">Replay</button></div>`);
+    } else if (currentScore < 7 && currentScore >= 3) {
+        $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>You've got some studying to do, but you can certainly become a recycling expert!</h3>
+        <img src=" " alt="smiling recycling bin icon"/><p>You got ${currentScore} /10 correct!</p><button class="replay-button">Replay</button></div>`);
     } else {
         $('.questionAnswerForm').html(`<div class="results correctFeedback"><h3>You need to work on your recycling knowledge, the Earth is counting on you!</h3>
-        <img src=" " alt="sad earth icon"/><p>You got ${score} /10 correct!</p><button class="replay-button">Replay</button></div>`);
+        <img src=" " alt="sad earth icon"/><p>You got ${currentScore} /10 correct!</p><button class="replay-button">Replay</button></div>`);
     }
 
     console.log('`renderResults` ran');
@@ -152,7 +152,6 @@ function handleReplay() {
 }
 
 function handleQuiz() {
-    //responsible for running all of our other functions upon page load
     handleStartButton();
     renderQuestion();
     handleSubmit(); 

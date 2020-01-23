@@ -1,4 +1,4 @@
-'use strict'
+//'use strict'
 
 //score and question number values values - currentScore/questionNumber
 let currentScore = 0;
@@ -33,7 +33,7 @@ function generateQuestion() {
         </div>`;
     } else {
         renderResults();
-        restartQuiz();
+        handleReplay();
         $('.question-num').text(10)
       }
     console.log('`generateQuestion` ran');  
@@ -47,7 +47,7 @@ function changeQuestionNumber() {
 }    
 
 function changeScore() {
-    score++;
+    currentScore++;
 
     console.log('`changeScore` ran');
 }
@@ -69,12 +69,8 @@ function renderQuestion() {
 }
 
 function handleSubmit() {
-    //a user selects an answer and clicks "submit"
-    //if a user does not select an answer, an alert pops up
-    //if question is correct, "yay, correct" 
-    //if question is incorrect, "incorrect, the correct answer is..."
     $('form').on('submit', function(event) {
-        event.preventDefault;
+        event.preventDefault();
         let selected = $('input:checked');
         let answer = selected.val();
         let correct = `${STORE[questionNumber].correctAnswer}`;
@@ -89,6 +85,11 @@ function handleSubmit() {
     console.log('`handleSubmit` ran');
 }
 
+function updateScore() {
+    changeScore();
+    $('.score').text(currentScore);   
+}
+
 function ifAnswerIsCorrect() {
     correctFeedback();
     updateScore();   
@@ -98,22 +99,17 @@ function ifAnswerIsWrong() {
     incorrectFeedback();
 }
 
-function updateScore() {
-    changeScore();
-    $('.score').text(score);   
-}
-
 function correctFeedback() {
-    let correctAnswer = `${STORE[question-num].correctAnswer}`;
-    $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="img"<img src="${STORE[question-num].img}"> 
-    <alt= "${STORE[question-num].alt}"/></div><p>Yes! You're right!</p>
+    //let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
+    $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="img"<img src="${STORE[questionNumber].img}"> 
+    <alt= "${STORE[questionNumber].alt}"/></div><p>Yes! You're right!</p>
     <button type=button class="next-button">Next Question</button></div>`);
 }
 
-function wrongFeedback() {
-    let correctAnswer = `${STORE[question-num].correctAnswer}`;
-    $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="img"<img src="${STORE[question-num].img}"> 
-    <alt= "${STORE[question-num].alt}"/></div><p>Oops, that's not right!</p><p>The correct answer is <span>"${correctAnswer}"</span>
+function incorrectFeedback() {
+    let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
+    $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="img"<img src="${STORE[questionNumber].img}"> 
+    <alt= "${STORE[questionNumber].alt}"/></div><p>Oops, that's not right!</p><p>The correct answer is <span>"${correctAnswer}"</span>
     </p><button type=button class="next-button">Next Question</button></div>`);
 }
 

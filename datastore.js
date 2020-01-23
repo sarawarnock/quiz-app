@@ -35,7 +35,7 @@ const STORE = [
     {
         question: 'What percentage of that trash could instead be recycled?',
         answers: [100, 25, 50, 60],
-        correctAnswer: 60,
+        correctAnswer: "60",
         img: 'https://i.imgur.com/wAuCnpO.jpg',
         alt: '60% image'
     },

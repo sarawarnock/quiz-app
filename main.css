@@ -1,19 +1,85 @@
-body {
+* {
     box-sizing: border-box;
 }
 
+body {
+    background: url('https://i.imgur.com/z21eVTp.jpg'), fixed;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 18px;
+}
+
 .question-score {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
+    color: black;
 }
 
 ul {
     list-style-type: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive, bold;
+    font-size: 46px;
+}
+
+.start p {
+    text-align: center;
+    font-family: 'Amatic SC', cursive, bold;
+    font-size: 36px;
+}
+
+.start-img {
+    width: 200px;
+    height: 200px;
 }
 
 .start {
     text-align: center;
 }
 
+.start-button {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
 .questionAnswerForm {
     text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+input [type=radio] {
+    color: black;
+    font-family: 'Oswald', sans-serif;
+ }
+
+.answerOption {
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+input:checked {
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.submit-button {
+    font-family: 'Oswald', sans-serif;
+    border-radius: 4px;
+
+}
+
+.correctFeedback {
+    font-family: 'Oswald', sans-serif;
+}
+
+.incorrectFeedback {
+    font-family: 'Oswald', sans-serif;
 }

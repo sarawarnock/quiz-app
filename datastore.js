@@ -12,8 +12,8 @@ const STORE = [
         question: 'Which of these cannot be recycled in a regular curbside bin?',
         answers: ['Styrofoam and bubble wrap', 'Plasic grocery bags and paper towels','Batteries and electronics', 'All of the above'],
         correctAnswer: 'All of the above',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/Sz8Yape.jpg',
+        alt: 'sea creatures in plastic bag'
     },
 
     {
@@ -28,16 +28,16 @@ const STORE = [
         question: 'How much trash does the average American throw away PER DAY (in lbs)?',
         answers: [7.6,  1.5, 4.4, 10],
         correctAnswer: 4.4,
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/15xIFCB.jpg',
+        alt: 'three trash bins'
     },
 
     {
         question: 'What percentage of that trash could instead be recycled?',
         answers: [100, 25, 50, 60],
         correctAnswer: 60,
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/wAuCnpO.jpg',
+        alt: '60% image'
     },
 
     {
@@ -52,16 +52,16 @@ const STORE = [
         question: 'Which recyclable items are commonly forgotton about?',
         answers: ['Beer bottles and cans', 'Plastic water bottles', 'Cereal boxes', 'Shampoo and conditioner bottles'],
         correctAnswer: 'Shampoo and conditioner bottles',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/uaATbw4.jpg',
+        alt: 'shampoo and conditioner bottles'
     },
 
     {
         question: 'How many plastic bottles are thrown away EACH HOUR in the United States?',
         answers: ['2.5 million', '10 million', '100,000',  '50,000'],
         correctAnswer: '2.5 million',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/TbLHwE4.jpg',
+        alt: 'various plastic bottles'
     },
 
     {

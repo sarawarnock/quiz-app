@@ -22,6 +22,12 @@ body {
     padding: 15px;
 }
 
+fieldset {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
 ul {
     list-style-type: none;
     font-family: 'Oswald', sans-serif;

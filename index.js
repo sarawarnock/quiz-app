@@ -34,7 +34,7 @@ function generateQuestion() {
     } else {
         renderResults();
         handleReplay();
-        //$('.question-num').text(10)
+        $('.question-num').text(10)
       }
     console.log('`generateQuestion` ran');  
     }
@@ -55,9 +55,10 @@ function changeScore() {
 function handleStartButton() {
     //when a user clicks the "start" button, the quiz begins
     $('.start').on('click', '.start-button', function(event) {
-        $('.start').remove();
+        $('.start').hide();
         $('.questionAnswerForm').css('display', 'block');
         $('.question-num').text(1);
+        renderQuestion();
     });
     console.log('`handleStartButton` ran');
 }
@@ -100,7 +101,7 @@ function ifAnswerIsWrong() {
 }
 
 function correctFeedback() {
-    //let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
+    let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     $('.questionAnswerForm').html(`<div class="correctFeedback">
     <div class="img"<img src="${STORE[questionNumber].img}"> 
     <alt= "${STORE[questionNumber].alt}"/></div><p>Yes! You're right!</p>
@@ -164,7 +165,7 @@ function handleReplay() {
 
 function handleQuiz() {
     handleStartButton();
-    renderQuestion();
+    //renderQuestion();
     handleSubmit(); 
     renderNextQuestion();
 }

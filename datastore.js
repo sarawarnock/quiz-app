@@ -74,7 +74,7 @@ const STORE = [
 
     {
         question: 'What is the biggest mistake people make when recycling?',
-        answers: ['Recycling dirty food containers', 'Bagging up all recyclables like trash', 'Recycling materials with a plastic or wax coating', 'Not checking with their local recycing program'],
+        answers: ['Recycling dirty food containers', 'Bagging up all recyclables like trash', 'Recycling materials with a plastic or wax coating', 'Not checking with their local recycling program'],
         correctAnswer: 'Not checking with their local recycling program',
         img: '',
         alt: ''

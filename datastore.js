@@ -4,8 +4,8 @@ const STORE = [
         question: 'How many common types of recycling are there?',
         answers: [5, 12, 8, 2],
         correctAnswer: 8,
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/eaIKGD1.png',
+        alt: 'image of the number 8'
     },
 
     {
@@ -17,7 +17,7 @@ const STORE = [
     },
 
     {
-        question: 'What are three things that are not considered traditional recycling, but can be recycled?',
+        question: 'Which of these are not considered traditional recycling, but can be recycled in special locations?',
         answers: ['Coffee cups and packing peanuts', 'Crayons, running shoes, and wine corks', 'Hardcover books, plastic shower curtains, and hangers', 'All of the above'],
         correctAnswer: 'Crayons, running shoes, and wine corks',
         img: '',

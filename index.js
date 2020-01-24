@@ -165,7 +165,7 @@ function handleReplay() {
 
 function handleQuiz() {
     handleStartButton();
-    //renderQuestion();
+    renderQuestion();
     handleSubmit(); 
     renderNextQuestion();
 }

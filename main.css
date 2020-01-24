@@ -72,6 +72,7 @@ button:hover, button:focus {
 .questionAnswerForm {
     text-align: center;
     font-family: 'Oswald', sans-serif;
+    padding: 15px;
 }
 
 input [type=radio] {

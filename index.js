@@ -58,7 +58,7 @@ function handleStartButton() {
         $('.start').hide();
         $('.questionAnswerForm').css('display', 'block');
         $('.question-num').text(1);
-        renderQuestion();
+        //renderQuestion();
     });
     console.log('`handleStartButton` ran');
 }

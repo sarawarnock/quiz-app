@@ -7,7 +7,7 @@ let questionNumber = 0;
 function generateQuestion() {
     //renders each question as user moves through the quiz
     if (questionNumber < STORE.length) {
-        return `<div class="question-${questionNumber}">
+        return `<div class="question-${questionNumber} showquestion">
         <h2>${STORE[questionNumber].question}</h2>
         <form>
         <fieldset>
@@ -53,18 +53,18 @@ function changeScore() {
 }
 
 function handleStartButton() {
-    //when a user clicks the "start" button, the quiz begins
     $('.start').on('click', '.start-button', function(event) {
         $('.start').hide();
         $('.questionAnswerForm').css('display', 'block');
         $('.question-num').text(1);
-        //renderQuestion();
+        renderQuestion();
     });
     console.log('`handleStartButton` ran');
 }
 
 function renderQuestion() {
     $('.questionAnswerForm').html(generateQuestion());
+    handleSubmit();
 
     console.log('`renderQuestion` ran');
 }
@@ -144,8 +144,6 @@ function renderResults() {
 }
 
 function renderNextQuestion() {
-    //when a user clicks "next question", 
-    //score changes, and the next question appears on the next screen
     $('main').on('click', '.next-button', function(event) {
         changeQuestionNumber();
         renderQuestion();
@@ -155,8 +153,6 @@ function renderNextQuestion() {
 }
 
 function handleReplay() {
-    //if the user decides to replay the quiz, they will click the replay button
-    //this will take them to the start of the quiz 
     $('main').on('click', '.replay-button', function(event) {
         location.reload();
     });
@@ -165,8 +161,8 @@ function handleReplay() {
 
 function handleQuiz() {
     handleStartButton();
-    renderQuestion();
-    handleSubmit(); 
+    //renderQuestion();
+    //handleSubmit(); 
     renderNextQuestion();
 }
 

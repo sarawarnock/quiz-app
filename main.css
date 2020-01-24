@@ -4,7 +4,9 @@
 
 body {
     background: url('https://i.imgur.com/z21eVTp.jpg'), fixed;
+    background-repeat: repeat;
     height: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +74,7 @@ button:hover, button:focus {
 .questionAnswerForm {
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    padding: 15px;
+    padding: 20px;
 }
 
 input [type=radio] {
@@ -91,6 +93,7 @@ input {
 h2 {
     font-family: 'Amatic SC', cursive, bold;
     font-size: 42px;
+    line-height: 40px;
 }
 
 input:checked {
@@ -116,4 +119,8 @@ input:checked {
     font-family: 'Amatic SC', cursive, bold;
     font-size: 42px;
     text-align: center;
+}
+
+alt {
+    font-family: 'Oswald', sans-serif;
 }

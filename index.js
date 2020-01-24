@@ -1,11 +1,9 @@
-//'use strict'
+'use strict'
 
-//score and question number values values - currentScore/questionNumber
 let currentScore = 0;
 let questionNumber = 0;
 
 function generateQuestion() {
-    //renders each question as user moves through the quiz
     if (questionNumber < STORE.length) {
         return `<div class="question-${questionNumber} showquestion">
         <h2>${STORE[questionNumber].question}</h2>
@@ -80,7 +78,7 @@ function handleSubmit() {
             ifAnswerIsCorrect();
         } else {
             selected.parent().addClass('wrong');
-            ifAnswerIsWrong();
+            ifAnswerIsIncorrect();
         }
     });
     console.log('`handleSubmit` ran');
@@ -96,23 +94,23 @@ function ifAnswerIsCorrect() {
     updateScore();   
 }
 
-function ifAnswerIsWrong() {
+function ifAnswerIsIncorrect() {
     incorrectFeedback();
 }
 
 function correctFeedback() {
-    let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
+    //let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     $('.questionAnswerForm').html(`<div class="correctFeedback">
-    <div class="img"<img src="${STORE[questionNumber].img}"> 
-    <alt= "${STORE[questionNumber].alt}"/></div><p>Yes! You're right!</p>
+    <img src="${STORE[questionNumber].img}" alt= "${STORE[questionNumber].alt}"/>
+    <p>Yes! You're right!</p>
     <button type=button class="next-button">Next Question</button></div>`);
 }
 
 function incorrectFeedback() {
     let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     $('.questionAnswerForm').html(`<div class="incorrectFeedback">
-    <div class="img"<img src="${STORE[questionNumber].img}"> 
-    <alt= "${STORE[questionNumber].alt}"/></div><p>Oops, that's not right!</p>
+    <img src="${STORE[questionNumber].img}" alt= "${STORE[questionNumber].alt}"/>
+    <p>Oops, that's not right!</p>
     <p>The correct answer is <span>"${correctAnswer}"</span>
     </p><button type=button class="next-button">Next Question</button></div>`);
 }
@@ -126,7 +124,7 @@ function renderResults() {
     } else if (currentScore < 10 && currentScore >=7) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
         <h3>Good work, you're on your way to becoming a green guru!</h3>
-        <img src=" " alt="green grass icon"/><p>You got ${currentScore} /10 correct!</p>
+        <img src=" " alt=" "/><p>You got ${currentScore} /10 correct!</p>
         <button class="replay-button">Replay</button></div>`);
     } else if (currentScore < 7 && currentScore >= 3) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">

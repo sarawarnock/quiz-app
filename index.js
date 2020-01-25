@@ -99,11 +99,13 @@ function ifAnswerIsIncorrect() {
 }
 
 function correctFeedback() {
-    //let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
+    let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     $('.questionAnswerForm').html(`<div class="correctFeedback">
     <img src="${STORE[questionNumber].img}" alt= "${STORE[questionNumber].alt}"/>
     <p>Yes! You're right!</p>
     <button type=button class="next-button">Next Question</button></div>`);
+
+    console.log('`correctFeedback` ran');
 }
 
 function incorrectFeedback() {
@@ -113,6 +115,8 @@ function incorrectFeedback() {
     <p>Oops, that's not right!</p>
     <p>The correct answer is <span>"${correctAnswer}"</span>
     </p><button type=button class="next-button">Next Question</button></div>`);
+
+    console.log('`incorrectFeedback` ran');
 }
 
 function renderResults() {
@@ -145,7 +149,6 @@ function renderNextQuestion() {
     $('main').on('click', '.next-button', function(event) {
         changeQuestionNumber();
         renderQuestion();
-        handleSubmit();
     });
     console.log('`renderNextQuestion` ran');
 }

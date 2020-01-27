@@ -124,3 +124,8 @@ input:checked {
 alt {
     font-family: 'Oswald', sans-serif;
 }
+
+img {
+    width: auto;
+    height: 250px;
+}

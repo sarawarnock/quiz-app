@@ -20,8 +20,8 @@ const STORE = [
         question: 'Which of these are not considered traditional recycling, but can be recycled in special locations?',
         answers: ['Coffee cups and packing peanuts', 'Crayons, running shoes, and wine corks', 'Hardcover books, plastic shower curtains, and hangers', 'All of the above'],
         correctAnswer: 'Crayons, running shoes, and wine corks',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/k0V3ShU.jpg',
+        alt: 'running shoes icon'
     },
 
     {
@@ -44,8 +44,8 @@ const STORE = [
         question: 'What is one of the biggest problems caused by landfills?',
         answers: ['They take up too much space', 'They are ugly', 'They leak toxic substances into the soil and water', 'They start fires'],
         correctAnswer: 'They leak toxic substances into the soil and water',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/NwzaT5i.jpg',
+        alt: 'trash sitting in a landfill'
     },
 
     {
@@ -68,15 +68,15 @@ const STORE = [
         question: 'How long does it take for an average size plastic bottle to decompose?',
         answers: ['100 years', '450 years', '10 years', '250 years'],
         correctAnswer: '450 years',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/Zu2RMTL.jpg',
+        alt: 'crushed soda bottles'
     },
 
     {
         question: 'What is the biggest mistake people make when recycling?',
         answers: ['Recycling dirty food containers', 'Bagging up all recyclables like trash', 'Recycling materials with a plastic or wax coating', 'Not checking with their local recycling program'],
         correctAnswer: 'Not checking with their local recycling program',
-        img: '',
-        alt: ''
+        img: 'https://i.imgur.com/axfOqUx.jpg',
+        alt: 'earth icon'
     }
 ];

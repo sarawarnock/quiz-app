@@ -50,6 +50,11 @@ h2 {
     line-height: 40px;
 }
 
+h3 {
+    color: black;
+    line-height: 42px;
+}
+
 .start p {
     text-align: center;
     font-family: 'Oswald', sans-serif;
@@ -60,6 +65,10 @@ h2 {
 
 .start {
     text-align: center;
+}
+
+.start-button {
+    font-size: 42px;
 }
 
 button {
@@ -162,11 +171,9 @@ alt {
     .question-score {
         font-family: 'Oswald', sans-serif;
         text-align: center;
-        color: black;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-self: row;
     }
 
     button {
@@ -177,6 +184,12 @@ alt {
         margin: 10px;
         padding: 10px;
         background-color: white;
+    }
+
+    img {
+        width: auto;
+        height: 300px;
+        border: 2px solid #FFB48A;
     }
 }
 
@@ -191,11 +204,9 @@ alt {
     .question-score {
         font-family: 'Oswald', sans-serif;
         text-align: center;
-        color: black;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-self: row;
     }
 
     button {
@@ -206,5 +217,10 @@ alt {
         margin: 10px;
         padding: 10px;
         background-color: white;
+    }
+    img {
+        width: auto;
+        height: 300px;
+        border: 2px solid #FFB48A;
     }
 }

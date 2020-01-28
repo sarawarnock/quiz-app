@@ -36,7 +36,7 @@ const STORE = [
         question: 'What percentage of that trash could instead be recycled?',
         answers: [100, 25, 50, 60],
         correctAnswer: "60",
-        img: 'images/60.jpg',
+        img: 'images/60percent-blue-1.svg',
         alt: '60% image'
     },
 
@@ -44,7 +44,7 @@ const STORE = [
         question: 'What is one of the biggest problems caused by landfills?',
         answers: ['They take up too much space', 'They are ugly', 'They leak toxic substances into the soil and water', 'They start fires'],
         correctAnswer: 'They leak toxic substances into the soil and water',
-        img: 'images/lanfill.jpeg',
+        img: 'images/landfill.jpeg',
         alt: 'trash sitting in a landfill'
     },
 

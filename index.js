@@ -123,22 +123,22 @@ function renderResults() {
     if (currentScore === 10) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
         <h3>Perfect score! You're a green guru!</h3>
-        <img src="https://i.imgur.com/A28Tx6p.jpg" alt="smiling peacful earth icon"/><p>You got 10/10 correct!</p>
+        <img src="images/greenguru (1).jpg" alt="smiling peacful earth icon"/><p>You got 10/10 correct!</p>
         <button class="replay-button">Replay</button></div>`);
     } else if (currentScore < 10 && currentScore >=7) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
         <h3>Good work, you're on your way to becoming a recycling master!</h3>
-        <img src="https://i.imgur.com/aiFOOHt.jpg" alt="smiling earth icon "/><p>You got ${currentScore} /10 correct!</p>
+        <img src="images/smiling earth.jpeg" alt="smiling earth icon "/><p>You got ${currentScore} /10 correct!</p>
         <button class="replay-button">Replay</button></div>`);
     } else if (currentScore < 7 && currentScore >= 3) {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
         <h3>You've got some studying to do, but you can certainly become a recycling expert!</h3>
-        <img src="https://i.imgur.com/kYp4uJv.jpg" alt="sad earth icon"/><p>You got ${currentScore} /10 correct!</p>
+        <img src="images/sad earth (1).jpg" alt="sad earth icon"/><p>You got ${currentScore} /10 correct!</p>
         <button class="replay-button">Replay</button></div>`);
     } else {
         $('.questionAnswerForm').html(`<div class="results correctFeedback">
         <h3>You need to work on your recycling knowledge, the Earth is counting on you!</h3>
-        <img src="https://i.imgur.com/f0KTqSG.jpg" alt="burning earth icon"/><p>You got ${currentScore} /10 correct!</p>
+        <img src="images/burningearth (1).jpg" alt="burning earth icon"/><p>You got ${currentScore} /10 correct!</p>
         <button class="replay-button">Replay</button></div>`);
     }
 

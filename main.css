@@ -273,10 +273,10 @@ alt {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     * {
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
         margin-top: 50%;
         margin-bottom: 50%;
     }

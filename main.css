@@ -14,6 +14,7 @@ body {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 li {
@@ -28,6 +29,7 @@ li {
     color: black;
     display: flex;
     flex-direction: row;
+    text-align: center;
 }
 
 fieldset {
@@ -47,12 +49,13 @@ h1 {
 h2 {
     font-family: 'Amatic SC', cursive, bold;
     font-size: 42px;
-    line-height: 40px;
+    line-height: 42px;
 }
 
 h3 {
     color: black;
-    line-height: 42px;
+    font-size: 50px;
+    line-height: 50px;
 }
 
 .start p {
@@ -126,14 +129,14 @@ label:hover, label:focus {
     background-color: #FFB48A;
 }
 
-input[type=radio],
+/* input[type=radio],
 input[type=checkbox] {
   opacity: 0;
   position: fixed;
   width: 0;
-}
+} */
 
-form input[type="radio"]:checked + label {
+.answerOption:focus {
     background-color: #FFB48A;
 }
 
@@ -146,21 +149,28 @@ form input[type="radio"]:checked + label {
 
 .correctFeedback {
     font-family: 'Amatic SC', cursive, bold;
-    font-size: 42px;
+    font-size: 40px;
+    font-weight: bolder;
     text-align: center;
     color: white;
+    line-height: 40px;
 }
 
 .incorrectFeedback {
     font-family: 'Amatic SC', cursive, bold;
-    font-size: 42px;
+    font-size: 40px;
+    font-weight: bolder;
     text-align: center;
     color: white;
+    line-height: 40px;
 }
 
 img {
     width: auto;
     height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
 }
 
 alt {
@@ -193,10 +203,20 @@ alt {
         background-color: white;
     }
 
+    .correctFeedback {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .incorrectFeedback {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
     img {
         width: auto;
         height: 300px;
-        /* border: 2px solid #FFB48A; */
+        max-width: none;
     }
 }
 
@@ -210,7 +230,6 @@ alt {
     
     .question-score {
         font-family: 'Oswald', sans-serif;
-        text-align: center;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -225,9 +244,20 @@ alt {
         padding: 10px;
         background-color: white;
     }
+
+    .correctFeedback {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .incorrectFeedback {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
     img {
         width: auto;
         height: 300px;
-        /* border: 2px solid #FFB48A; */
+        max-width: none;
     }
 }

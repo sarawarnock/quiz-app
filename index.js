@@ -34,20 +34,15 @@ function generateQuestion() {
         handleReplay();
         $('.question-num').text(10)
       }
-    console.log('`generateQuestion` ran');  
     }
 
 function changeQuestionNumber() {
     questionNumber++;
     $('.question-num').text(questionNumber+1);
-
-    console.log('`changeQuestionNumber` ran');
 }    
 
 function changeScore() {
     currentScore++;
-
-    console.log('`changeScore` ran');
 }
 
 function handleStartButton() {
@@ -57,14 +52,11 @@ function handleStartButton() {
         $('.question-num').text(1);
         renderQuestion();
     });
-    console.log('`handleStartButton` ran');
 }
 
 function renderQuestion() {
     $('.questionAnswerForm').html(generateQuestion());
     handleSubmit();
-
-    console.log('`renderQuestion` ran');
 }
 
 function handleSubmit() {
@@ -81,7 +73,6 @@ function handleSubmit() {
             ifAnswerIsIncorrect();
         }
     });
-    console.log('`handleSubmit` ran');
 }
 
 function updateScore() {
@@ -104,8 +95,6 @@ function correctFeedback() {
     <img src="${STORE[questionNumber].img}" alt= "${STORE[questionNumber].alt}"/>
     <p>Yes! You're right!</p>
     <button type=button class="next-button">Next Question</button></div>`);
-
-    console.log('`correctFeedback` ran');
 }
 
 function incorrectFeedback() {
@@ -115,8 +104,6 @@ function incorrectFeedback() {
     <p>Oops, that's not right!</p>
     <p>The correct answer is <span>"${correctAnswer}"</span>
     </p><button type=button class="next-button">Next Question</button></div>`);
-
-    console.log('`incorrectFeedback` ran');
 }
 
 function renderResults() {
@@ -141,8 +128,6 @@ function renderResults() {
         <img src="images/burningearth (1).jpg" alt="burning earth icon"/><p>You got ${currentScore} /10 correct!</p>
         <button class="replay-button">Replay</button></div>`);
     }
-
-    console.log('`renderResults` ran');
 }
 
 function renderNextQuestion() {
@@ -150,20 +135,16 @@ function renderNextQuestion() {
         changeQuestionNumber();
         renderQuestion();
     });
-    console.log('`renderNextQuestion` ran');
 }
 
 function handleReplay() {
     $('main').on('click', '.replay-button', function(event) {
         location.reload();
     });
-    console.log('`handleReplay` ran');
 }
 
 function handleQuiz() {
     handleStartButton();
-    //renderQuestion();
-    //handleSubmit(); 
     renderNextQuestion();
 }
 

@@ -3,7 +3,7 @@
 }
 
 body {
-    background: url('https://i.imgur.com/z21eVTp.jpg'), fixed;
+    background-image: url('https://i.imgur.com/z21eVTp.jpg'), fixed;
     background-repeat: repeat;
     height: 100%;
     width: 100%;
@@ -21,12 +21,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-self: row;
-    padding: 15px;
 }
 
 .question-num {
     text-align: center;
-    padding-bottom: 10px;
 }
 
 .score {
@@ -44,8 +42,8 @@ fieldset {
 
 ul {
     list-style-type: none;
-    font-family: 'Oswald', sans-serif;
-    margin: 10px;
+    /* font-family: 'Oswald', sans-serif; 
+    margin: 10px; */
 }
 
 h1 {
@@ -53,6 +51,7 @@ h1 {
     font-family: 'Amatic SC', cursive, bold;
     font-size: 46px;
     margin-bottom: 20px;
+    line-height: 40px;
 }
 
 h2 {
@@ -68,11 +67,6 @@ h2 {
     padding: 15px;
 }
 
-.start-img {
-    width: 200px;
-    height: 200px;
-}
-
 .start {
     text-align: center;
 }
@@ -83,7 +77,8 @@ button {
     font-size: 18px;
     border-radius: 10px;
     margin: 10px;
-    padding: 6px;
+    padding: 10px;
+    background-color: white;
 }
 
 button:hover, button:focus {
@@ -106,10 +101,6 @@ label {
 
 label:nth-child(1) {
     background-color: #9ED0E8;
-}
-
-label:nth-child(1):checked {
-    background-color: #FFB48A;
 }
 
 label:nth-child(2) {
@@ -151,18 +142,16 @@ form input[type="radio"]:checked + label {
     background-color: #FFB48A;
   }
 
-input {
+/* input {
     color: black;
     font-family: 'Amatic SC', cursive, bold;
     size: 24px;
     position: relative;
     padding-bottom: 20px;
     visibility: hidden;
-}
+}*/
 
 .answerOption {
-    color: black;
-    font-family: 'Oswald', sans-serif;
     display: flex;
     justify-content: center;
     font-size: 22px;

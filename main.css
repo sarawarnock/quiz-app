@@ -79,11 +79,13 @@ button {
     margin: 20px;
     padding: 15px;
     background-color: white;
+    opacity: .8;
 }
 
 button:hover, button:focus {
     background-color: #ADFFD3;
     color: #FF724D;
+    opacity: 1;
 }
 
 .questionAnswerForm {
@@ -97,22 +99,27 @@ label {
     padding: 20px;
     line-height: 22px;
     margin: 10px;
+    opacity: .7;
 }
 
 label:nth-child(1) {
     background-color: #9ED0E8;
+    opacity: 1;
 }
 
 label:nth-child(2) {
     background-color: #9EE8D6;
+    opacity: 1;
 }
 
 label:nth-child(3) {
     background-color: #ADFFD3;
+    opacity: 1;
 }
 
 label:nth-child(4) {
     background-color: #BAFCFF;
+    opacity: 1;
 }
 
 label:hover, label:focus {
@@ -189,7 +196,7 @@ alt {
     img {
         width: auto;
         height: 300px;
-        border: 2px solid #FFB48A;
+        /* border: 2px solid #FFB48A; */
     }
 }
 
@@ -221,6 +228,6 @@ alt {
     img {
         width: auto;
         height: 300px;
-        border: 2px solid #FFB48A;
+        /* border: 2px solid #FFB48A; */
     }
 }

@@ -3,7 +3,7 @@
 }
 
 body {
-    background: url('images/beautiful-watercolor-background\ \(1\).jpg'), fixed;
+    background: url('images/dramaticdarkgreen\ \(1\).jpg') fixed;
     background-repeat: repeat;
     height: 100%;
     width: 100%;
@@ -132,12 +132,14 @@ form input[type="radio"]:checked + label {
     font-family: 'Amatic SC', cursive, bold;
     font-size: 42px;
     text-align: center;
+    color: white;
 }
 
 .incorrectFeedback {
     font-family: 'Amatic SC', cursive, bold;
     font-size: 42px;
     text-align: center;
+    color: white;
 }
 
 img {
